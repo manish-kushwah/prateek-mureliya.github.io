@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>{%- if page.title -%} {{ page.title }} | {{ site.title}} {%- else -%} {{ site.title}} {%- endif -%}</title>
+{%- seo title=false -%}
+
+<link rel="shortcut icon" href="{{ site.data.variables.path.favicon  | relative_url }}">
+
+{%- feed_meta -%}
+
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="{{ #43926e }}">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="{{ #43926e }}">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="{{ #43926e }}">
+
+{%- for filename in site.data.variables.default.css -%}
+    <link rel="stylesheet" href="{{ site.data.variables.cdn.css[filename] | relative_url }}"/>
+{%- endfor -%}
+
+{%- for filename in layout.css -%}
+    <link rel="stylesheet" href="{{ site.data.variables.cdn.css[filename] | relative_url }}"/>
+{%- endfor -%}

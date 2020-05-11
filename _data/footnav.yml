@@ -1,0 +1,9 @@
+-
+  title: Subscribe
+  icon: <i class="fa fa-fw fa-rss"></i>
+  link: /feed.xml
+
+-
+  title: Sitemap
+  icon: <i class="fa fa-fw fa-sitemap"></i>
+  link: /sitemap.xml

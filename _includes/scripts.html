@@ -1,0 +1,8 @@
+<!-- Compiled and minified JavaScript -->
+{%- for filename in site.data.variables.default.js -%}
+    <script src="{{ site.data.variables..cdn.js.[filename] | relative_url }}"></script>
+{%- endfor -%}
+
+{%- for filename in layout.js -%}
+    <script src="{{ site.data.variables.cdn.js[filename]  | relative_url }}"></script>
+{%- endfor -%}

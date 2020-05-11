@@ -1,0 +1,25 @@
+admin: prateek
+
+prateek:
+  name: Prateek Kumar Mureliya
+  image: /assets/images/profile.jpg
+  designation: Software Engineer
+  description: I'm a software engineer who likes learning, discussing, and solving interesting problems.
+  path: /
+  social-links:
+    -
+        text: LinkedIn
+        icon: <i class="fa fa-fw fa-linkedin"></i>
+        link: https://www.linkedin.com/in/prateekkumar1393/
+    -
+        text: Facebook
+        icon: <i class="fa fa-fw fa-facebook"></i>
+        link: http://facebook.com/prateekkumar1393/
+    -
+        text: Instagram
+        icon: <i class="fa fa-fw fa-instagram"></i>
+        link: https://www.instagram.com/mureliya/
+    -
+        text: Github
+        icon: <i class="fa fa-fw fa-github"></i>
+        link: https://github.com/prateekkumar1393/

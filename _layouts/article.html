@@ -1,0 +1,100 @@
+---
+layout: default
+css:
+    - blog
+js:
+    - article
+---
+
+<div class="row">
+    <div class="col l1 hide-on-med-and-down"></div>
+    <div class="col s12 m9 l8">
+        <section class="post">
+            <div class="post-title">{{ page.title }}</div>
+
+            <div class="post-meta">
+                <span class="author">
+                    <span class="author-avatar">
+                        <a href="{{ site.data.authors[page.author].path }}">
+                            <img alt="{{ site.data.authors[page.author].name }}" src="{{ site.data.authors[page.author].image  | relative_url }}" />
+                        </a>
+                    </span>
+                    <span class="author-name">
+                        <a href="{{ site.data.authors[page.author].path }}">{{ site.data.authors[page.author].name }}</a>
+                    </span>
+                </span>
+                <span class="published-date">
+                    <i class="fa fa-fw fa-calendar-check-o"></i> {{ page.date | date_to_string: "ordinal", "US" }}                     
+                    </span>
+                </span>
+            </div>
+
+            {%- if page.image -%}
+                <div class="post-image">
+                    <img alt="{{ page.title }}" src="{{ page.image }}" class="responsive-img">
+                </div>
+            {%- endif -%}
+
+            <article class="post-content">
+                {{ content }}
+            </article>
+
+            <div class="post-tags">
+                <i class="fa fa-fw fa-tags"></i>
+                {%- for tag in page.tags -%}
+                    <a href="/">{{ tag }}</a>
+                {%- endfor -%}
+            </div>
+
+            <div class="row post-navigation">
+                <div class="col s12 m6 left">
+                    {% if page.next.url %}
+                    <a class="nav-link" href="{{page.next.url}}">
+                        <i class="fa fa-fw fa-angle-left"></i><span class="nav-title">{{page.next.title}}</span>
+                    </a>
+                    {% endif %}
+                </div>
+                <div class="col s12 m6 right">
+                    {% if page.previous.url %}
+                    <a class="nav-link" href="{{page.previous.url}}">
+                        <span class="nav-title">{{page.previous.title}}</span><i class="fa fa-fw fa-angle-right"></i>
+                    </a>
+                    {% endif %}
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="row post-author">
+                <div class="col s2">
+                    <a href="{{ site.data.authors[page.author].path }}" class="avatar">
+                        <img src="{{ site.data.authors[page.author].image  | relative_url }}" alt="{{ site.data.authors[page.author].name }}" class="responsive-img" />
+                    </a>
+                </div>
+                <div class="col s10">
+                    <div class="name"><a href="{{ site.data.authors[page.author].path }}">{{ site.data.authors[page.author].name }}</a></div>
+                    <div class="description">{{ site.data.authors[page.author].description }}</div>
+                    <ul class="hide-bullet social-links">
+                        {%- for social in site.data.authors[site.data.authors.admin].social-links -%}
+                            <li><a href="{{ social.link }}">{{ social.icon }}</a></li>
+                        {%- endfor -%}
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="col m3 l3 hide-on-small-and-down">
+        <aside class="post-aside">
+            <div class="nav-space"></div>
+                <ul class="hide-bullet table-of-contents">
+                </ul>
+        </aside>
+    </div>
+</div>
+
+<ul class="hide-bullet post-share">
+    {%- for share in site.data.share-post -%}
+        {%- include snippets/get-post-share-link.html item=share article=page -%}
+        {%- assign _share_link = _return -%}
+        <li><a href="{{ _share_link }}" title="{{ share.title }}" target="_blank" rel="nofollow noopener">{{ share.icon }}</a></li>
+    {%- endfor -%}
+</ul>

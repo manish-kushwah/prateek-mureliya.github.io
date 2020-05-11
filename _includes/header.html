@@ -1,0 +1,37 @@
+<nav class="nav-wrapper">
+    <button id="menu" class="waves-effect waves-light"><i class="material-icons">short_text</i></button>
+    <a href="{{ site.data.variables.path.root }}" class="brand-logo">{{ site.title }}</a>    
+    <button id="search" class="right waves-effect waves-light"><i class="material-icons">search</i></button>
+
+    {%- if page.layout == 'article' -%}
+        <button id="share" class="right waves-effect waves-light"><i class="material-icons">share</i></button>
+    {%- endif -%}
+</nav>
+
+<nav class="side-nav">
+    <div class="nav-space"></div>
+    <div class="profile-section">
+        <img src="{{ site.data.authors[site.data.authors.admin].image }}" alt="{{site.data.authors[site.data.authors.admin].name }}" class="author-img" />
+        <div class="author-name">{{site.data.authors[site.data.authors.admin].name }}</div>
+        <div class="designation">{{site.data.authors[site.data.authors.admin].designation }}</div>
+        
+        <ul class="hide-bullet social-links">
+            {%- for social in site.data.authors[site.data.authors.admin].social-links limit: 4 -%}
+                <li><a href="{{ social.link }}">{{ social.icon }}</a></li>
+            {%- endfor -%}
+        </ul>
+    </div>
+
+    <ul class="hide-bullet navigation-menu">
+        {%- for item in site.data.navigation -%}
+            <li class="{%- if item.layout contains page.layout -%}active{%- endif -%}"><a href="{{ item.path }}">{{ item.icon }} {{ item.text }}</a></li>
+        {%- endfor -%}
+    </ul>
+
+    <!-- <div class="theme">
+        <input type="checkbox" id="theme-btn" />
+        <label for="theme-btn" class="fa fa-fw"></label>
+    </div> -->
+</nav>
+
+<div class="nav-space"></div>

@@ -1,0 +1,42 @@
+path:
+  root: /
+  favicon: /favicon.ico
+
+default:
+  css:
+    - google_icon
+    - font_awesome
+    - main
+  js:
+    - jquery
+    - materialize
+    - action
+    - fuse
+
+cdn:
+  css:
+    font_awesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
+    google_icon: https://fonts.googleapis.com/icon?family=Material+Icons
+    main: /assets/css/main.css
+    blog: /assets/css/blog.css
+    home: /assets/css/home.css
+    404: /assets/css/404.css
+
+  js:
+    jquery: https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
+    materialize: https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js
+    fuse: https://cdn.jsdelivr.net/npm/fuse.js@5.2.3
+    action: /assets/js/action.js
+    article: /assets/js/article.js
+
+
+# css:
+#   font_awesome: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
+#   google_icon: https://fonts.googleapis.com/icon?family=Material+Icons
+#   bootstrap: https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
+#   materialize: https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css
+# js:
+#   jquery: https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
+#   bootstrap: https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js
+#   popper: https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js
+#   materialize: https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js

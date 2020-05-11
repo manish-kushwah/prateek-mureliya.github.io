@@ -1,0 +1,48 @@
+.footer {
+    background-color: $high-contrast;
+    color: $low-contrast;
+
+    .row {
+        margin: 0;
+    }
+
+    .col {
+        text-align: center;
+        padding: 6px 0;
+
+        @media #{$medium-and-up} {
+            padding: 10px 24px;
+        }
+    }
+
+    a {
+        color: $low-contrast-light;
+
+        &:hover {
+            padding-bottom: 2px;
+            border-bottom: 1px solid;
+        }
+    }
+
+    .links-pane {
+        @media #{$medium-and-up} {
+            text-align: left;
+        }
+
+        a {
+            padding: 0 8px;
+            border-left: 1px solid $high-contrast-light;
+
+            &:first-child {
+                border-left: none;
+                padding-left: 0;
+            }
+        }
+    }
+
+    .hosted {
+        @media #{$medium-and-up} {
+            text-align: right;
+        }
+    }
+}

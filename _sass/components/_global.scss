@@ -1,0 +1,132 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 14px;
+}
+
+body {
+    position: relative;
+    font-family: $font-stack;
+    background-color: $background-color;
+    color: $on-background-color;
+    word-break: break-word;
+
+    &.lock-body {
+        overflow: hidden;
+    }
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+
+    // Gets rid of tap active state
+    -webkit-tap-highlight-color: transparent;
+
+    &.link {
+        border-bottom: 1px dashed;
+        padding-bottom: 3px;
+
+        &:hover {
+            opacity: 0.87;
+        }
+    }
+}
+
+img {
+    vertical-align: middle;
+
+    &.responsive-img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+ul {
+    &.hide-bullet {
+        list-style-type: none;
+    }
+}
+
+.left {
+    float: left !important;
+}
+.right {
+    float: right !important;
+}
+
+.clearfix {
+    clear: both !important;
+}
+
+//Media Query Classes
+.hide-on-small-only, .hide-on-small-and-down {
+    @media #{$small-and-down} {
+        display: none !important;
+    }
+}
+.hide-on-med-and-down {
+    @media #{$medium-and-down} {
+        display: none !important;
+    }
+}
+.hide-on-med-and-up {
+    @media #{$medium-and-up} {
+        display: none !important;
+    }
+}
+.hide-on-med-only {
+    @media only screen and (min-width: $small-screen) and (max-width: $medium-screen) {
+        display: none !important;
+    }
+}
+.hide-on-large-only {
+    @media #{$large-and-up} {
+        display: none !important;
+    }
+}
+.hide-on-extra-large-only {
+    @media #{$extra-large-and-up} {
+        display: none !important;
+    }
+}
+
+// Center text on mobile
+.center-on-small-only {
+    @media #{$small-and-down} {
+        text-align: center;
+    }
+}
+
+code.highlighter-rouge {
+    padding: 1.5px 7.07px;
+    font-size: 1rem;
+    border-radius: 3px;
+    background-color: $low-contrast-light;
+}
+
+// scrollbar
+::-webkit-scrollbar {
+    width: 10px;
+
+    &-track {
+        background-color: $low-contrast-light;
+    }
+
+    &-thumb {
+        border-radius: 10px;
+        background-color: $primary-light;
+
+        &:hover {
+            background-color: $primary;
+        }
+    }
+}

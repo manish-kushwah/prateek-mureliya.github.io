@@ -1,0 +1,28 @@
+-
+  title: Facebook
+  icon: <i class="fa fa-fw fa-facebook"></i>
+  color: #3b5998
+  link: https://www.facebook.com/sharer/sharer.php?u=
+-
+  title: Twitter
+  icon: <i class="fa fa-fw fa-twitter"></i>
+  color: #00acee
+  link: https://twitter.com/intent/tweet?url=
+
+-
+  title: Whatsapp
+  icon: <i class="fa fa-fw fa-whatsapp"></i>
+  color: #25d366
+  link: https://api.whatsapp.com/send?text=
+
+-
+  title: LinkedIn
+  icon: <i class="fa fa-fw fa-linkedin"></i>
+  color: #00acee
+  link: https://www.linkedin.com/sharing/share-offsite/?mini=true&ro=true&trk=EasySocialShareButtons&url=
+
+-
+  title: Email
+  icon: <i class="fa fa-fw fa-envelope"></i>
+  color: #777
+  link: mailto:?subject=

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+// Color
+@import "components/theme",
+        "components/variables"
+;
+
+.container {
+    text-align: center;
+    max-width: 600px;
+}
+
+.error {
+    position: relative;
+    display: inline-block;
+    color: $low-contrast-light;
+    font-size: 12rem;
+    margin-top: 30px;
+
+    &::before {
+        position: absolute;
+        content: '404';
+        top: -9px;
+        left: -12px;
+        color: $primary;
+    }
+}
+
+.error-msg {
+    font-size: 1.8rem;
+}
+
+.error-desc {
+    margin-top: 25px;
+    font-size: 1.15rem;
+}
+
+.back-link {
+    font-size: 1.4rem;
+    margin-top: 25px;
+}

@@ -1,3 +1,36 @@
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-title: "" # the name of your site, e.g. ACME Corp.
+title: Mureliya blog
+description: >-
+  I'm a software engineer who likes learning, discussing, and solving interesting problems.
+baseurl: ""
+url: ""
+github-repo: https://github.com/prateekkumar1393/prateekkumar1393.github.io
+jekyll: https://jekyllrb.com/
+
+paginate: 10
+paginate_path: "/page:num/"
+
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
+ - jekyll-sitemap
+ - jekyll-paginate
+
+sass:
+  style: compressed
+
+defaults:
+  - 
+    scope:
+      path: ''
+      type: posts
+    values:
+      layout: article
+      author: prateek
+      permalink: /:categories/:year/:month/:day/:title/
+      categories: blog
+      excerpt_separator: <!--more-->
+
+exclude:
+  - README.md
+  - LICENSE
+  - /assets/plugins/

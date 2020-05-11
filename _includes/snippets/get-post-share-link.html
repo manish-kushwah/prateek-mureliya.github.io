@@ -1,0 +1,24 @@
+{%- assign _facebook = site.data.share-post[0] -%}
+{%- assign _twitter = site.data.share-post[1] -%}
+{%- assign _whatsapp = site.data.share-post[2] -%}
+{%- assign _linkedin = site.data.share-post[3] -%}
+{%- assign _email = site.data.share-post[4] -%}
+
+{%- assign _title = include.item.title -%}
+{%- assign _link = include.item.link -%}
+{%- assign _page_url = include.article.url | prepend: site.url | url_encode -%}
+{%- assign _post_title = include.article.title | default: site.title | url_encode -%}
+
+{%- if _title == _facebook.title -%}
+    {%- assign _return = _link | append: _page_url | append: '&t=' | append: _post_title -%}
+{%- elsif _title == _twitter.title -%}
+    {%- assign _return = _link | append: _page_url | append: '&text=' | append: _post_title -%}
+{%- elsif _title == _whatsapp.title -%}
+    {%- assign _return = _link | append: _post_title | append: '(' | append: _page_url | append: ')' -%}
+{%- elsif _title == _linkedin.title -%}
+    {%- assign _return = _link | append: _page_url | append: '&title=' | append: _post_title -%}
+{%- elsif _title == _email.title -%}
+    {%- assign _return = _link | append: _post_title | append: '&body=<strong>hii prateek</strong>' -%}
+{%- else -%}
+    {%- assign _return = nil -%}
+{%- endif -%}

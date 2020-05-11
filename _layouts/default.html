@@ -1,12 +1,45 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-  </head>
-  <body>
-    {{ content}}
-  </body>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+    {%- include head.html -%}
+</head>
+<body class="light">
+    <!-- <script>
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for(var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        document.getElementsByTagName('body')[0].setAttribute("class", getCookie('theme'));
+    </script> -->
+
+    {%- include header.html -%}
+    
+    <div class="container">
+        {{ content }}
+    </div>
+    
+    {%- include footer.html -%}
+
+    <div class="search-pane">
+        <div class="search-container">
+            <input type="text" id="query" placeholder="search.." />
+
+            <ul class="hide-bullet search-post">
+            </ul>
+        </div>
+    </div>
+
+    {%- include scripts.html -%}
+</body>
 </html>

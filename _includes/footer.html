@@ -1,0 +1,12 @@
+<footer class="footer">
+    <div class="row">
+        <div class="col s12 m6 links-pane">
+            {%- for footnav in site.data.footnav -%}
+                <a href="{{ footnav.link }}" alt="{{ footnav.title }}">{{ footnav.icon }}{{ footnav.title }}</a>
+            {%- endfor -%}
+        </div>
+        <div class="col s12 m6 hosted">
+            Hosted on <a href="{{ site.github-repo }}">GitHub</a>, serve by <a href="{{ site.jekyll }}">Jekyll</a>
+        </div>
+    </div>
+</footer>

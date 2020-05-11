@@ -1,9 +1,17 @@
-$backgroundColor: #ffffff;
-$bodyColor: #000000;
-$bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+@charset "UTF-8";
 
-body {
-  background: $backgroundColor;
-  color: $bodyColor;
-  font-family: $bodyFont;
-}
+// Color
+@import "components/theme";
+
+// Variables;
+@import "components/variables";
+
+// Reset
+@import "components/normalize";
+
+// Components
+@import "components/global";
+@import "components/grid";
+@import "components/waves";
+@import "components/navbar";
+@import "components/footer";
